@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 import useProducts from '../../../hooks/useProducts';
 import './Home.css'
 import Product from './Product/Product';
 const Home = () => {
-    const [products, setProducts] = useProducts()
+    const [products, setProducts] = useProducts();
+//     const { isLoading, error, data:products } = useQuery('repoData', () =>
+//      fetch('http://localhost:5000/products').then(res =>
+//        res.json()
+//      )
+//    )
+ 
     return (
         <div>
             <div className='banner-container'>
