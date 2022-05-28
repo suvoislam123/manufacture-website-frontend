@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+ import logo from './logo.svg';
 import './App.css';
 import Header from './components/sharedComponents/Header/Header';
 import { Route, Routes } from 'react-router-dom';
@@ -17,9 +17,10 @@ import AddProduct from './components/standAlonComponents/Admin/AddProduct/AddPro
 import UpdateInventoryItem from './components/standAlonComponents/Admin/ManageInventory/UpdateInventoryItem/UpdateInventoryItem';
 import Blogs from './components/standAlonComponents/Blogs/Blogs';
 import ConfirmOrder from './components/standAlonComponents/UserOrders/ConfirmOrder/ConfirmOrder';
+import UserPayment from './components/standAlonComponents/UserOrders/UserPayment';
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col justify-between ">
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
@@ -42,6 +43,11 @@ function App() {
         </RequireAuth>}
 
         ></Route>
+        <Route path='/payments/:id' element={
+          <RequireAuth>
+            <UserPayment />
+          </RequireAuth>
+        }></Route>
         <Route path='/about' element={
           <RequireAuth>
             <About />

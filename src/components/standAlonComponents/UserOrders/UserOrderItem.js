@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const UserOrderItem = ({order}) => {
     const { _id, product_id,order_date, name, image, quantity, total, address } = order;
@@ -22,10 +23,12 @@ const UserOrderItem = ({order}) => {
             <td className="text-sm text-gray-900 font-light px-2 w-1/12 py-4 whitespace-nowrap">
                 {total}
             </td>
+            <td>
+                <Link to={`/payments/${_id}`}><button className='bg-blue-700 px-8 text-white rounded-md'>Pay</button></Link>
+            </td>
             <td className="text-sm text-gray-900 font-light px-2 w-1/12 py-4 whitespace-nowrap">
                {address }
-            </td>
-            
+            </td>  
         </tr>
     );
 };

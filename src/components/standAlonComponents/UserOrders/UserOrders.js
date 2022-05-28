@@ -62,6 +62,9 @@ const UserOrders = () => {
                                                 Total Amount
                                             </th>
                                             <th scope="col" className="text-sm font-medium text-gray-900 px-1 w-1/12 py-4 text-left">
+                                                Payment Status
+                                            </th>
+                                            <th scope="col" className="text-sm font-medium text-gray-900 px-1 w-1/12 py-4 text-left">
                                                 Receive At
                                             </th>
                                             
