@@ -8,7 +8,7 @@ import ReviewItem from './ReviewItem';
 const Reviews = () => {
         const [reviews, setReviews]=useState([])
         useEffect(()=>{
-            fetch('http://localhost:5000/readreviews')
+            fetch('https://guarded-earth-35467.herokuapp.com/readreviews')
             .then(res=>res.json())
             .then(data=>setReviews(data))
 

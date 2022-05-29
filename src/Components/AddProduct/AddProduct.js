@@ -16,7 +16,7 @@ const AddProduct = () => {
     const quantity = useRef('');
 
     const { isLoading: userloading, data: userData } = useQuery(['userdata', user], () =>
-        fetch(`http://localhost:5000/readUserData?email=${user?.email}`).then(res =>
+        fetch(`https://guarded-earth-35467.herokuapp.com/readUserData?email=${user?.email}`).then(res =>
             res.json()
         )
     )
@@ -36,7 +36,7 @@ const AddProduct = () => {
             
         }
         e.preventDefault();
-        fetch("http://localhost:5000/addproduct", {
+        fetch("https://guarded-earth-35467.herokuapp.com/addproduct", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

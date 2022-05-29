@@ -14,7 +14,7 @@ const MyOrders = () => {
     useEffect(()=>{
         if(user)
         { 
-         fetch(`http://localhost:5000/readmyorders?email=${user?.email}`)
+         fetch(`https://guarded-earth-35467.herokuapp.com/readmyorders?email=${user?.email}`)
 		.then(res=>res.json())
 		.then(data=>setOrders(data))
 

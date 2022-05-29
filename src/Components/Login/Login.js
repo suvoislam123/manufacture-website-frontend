@@ -27,7 +27,7 @@ const Login = () => {
     useEffect(() => {
         if (user) {
 
-            fetch('http://localhost:5000/login', {
+            fetch('https://guarded-earth-35467.herokuapp.com/login', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ const AddReview = () => {
   const [rating, setRating] = useState("");
   const [user, loading] = useAuthState(auth);
   const { isLoading: userloading, data: userData } = useQuery(["userdata", user], () =>
-    fetch(`http://localhost:5000/readUserData?email=${user?.email}`).then((res) => res.json())
+    fetch(`https://guarded-earth-35467.herokuapp.com/readUserData?email=${user?.email}`).then((res) => res.json())
   );
   const review = useRef("");
   const handleFormsubmit = (e) => {
@@ -20,7 +20,7 @@ const AddReview = () => {
       name: userData.name,
     };
     e.preventDefault();
-    fetch("http://localhost:5000/addreview", {
+    fetch("https://guarded-earth-35467.herokuapp.com/addreview", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
