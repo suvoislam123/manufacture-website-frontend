@@ -19,14 +19,14 @@ const ProductDetails = () => {
 	
 
 	useEffect(()=>{
-        fetch(`https://guarded-earth-35467.herokuapp.com/readUserData?email=${user?.email}`)
+        fetch(`https://ancient-ravine-45095.herokuapp.com/readUserData?email=${user?.email}`)
 		.then(res=>res.json())
 		.then(data=>setUserdata(data))
 	},[user])
 
 
 	const { isLoading: productLoading, data: product } = useQuery('productdata', () =>
-		fetch(`https://guarded-earth-35467.herokuapp.com/readSingleToolsData/${id}`).then(res =>
+		fetch(`https://ancient-ravine-45095.herokuapp.com/readSingleToolsData/${id}`).then(res =>
 			res.json()
 		)
 	)
@@ -72,7 +72,7 @@ const ProductDetails = () => {
 			name:userData.name
         }
         e.preventDefault();
-        fetch("https://guarded-earth-35467.herokuapp.com/addOrder", {
+        fetch("https://ancient-ravine-45095.herokuapp.com/addOrder", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

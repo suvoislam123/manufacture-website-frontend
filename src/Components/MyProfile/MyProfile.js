@@ -10,7 +10,7 @@ const MyProfile = () => {
     const [user, loading] = useAuthState(auth)
 
     const { isLoading: userloading, data: userData ,refetch} = useQuery(['userprofiledata', user], () =>
-        fetch(`https://guarded-earth-35467.herokuapp.com/readUserData?email=${user?.email}`).then(res =>
+        fetch(`https://ancient-ravine-45095.herokuapp.com/readUserData?email=${user?.email}`).then(res =>
             res.json()
         )
     )
@@ -40,7 +40,7 @@ const MyProfile = () => {
         }
         e.preventDefault();
         console.log(updateuser);
-        fetch(`https://guarded-earth-35467.herokuapp.com/updateuserprofile/${userData._id}`, {
+        fetch(`https://ancient-ravine-45095.herokuapp.com/updateuserprofile/${userData._id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json',

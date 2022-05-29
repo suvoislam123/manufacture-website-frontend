@@ -7,7 +7,7 @@ const useAdmin = user => {
         const token = localStorage.getItem('accessToken')
         const email = user?.email;
         if(email){
-            fetch(`https://guarded-earth-35467.herokuapp.com/admin/${email}`, {
+            fetch(`https://ancient-ravine-45095.herokuapp.com/admin/${email}`, {
                 method:'GET',
                 headers: {
                     'content-type': 'application/json',

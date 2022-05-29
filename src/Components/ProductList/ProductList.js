@@ -8,7 +8,7 @@ import { useQuery } from 'react-query';
 const ProductList = () => {
     // const [product, setProduct] = useState([]);
     const { isLoading, error, data: products } = useQuery('productsData', () =>
-        fetch('https://guarded-earth-35467.herokuapp.com/readtoolsData?limit=6').then(res =>
+        fetch('https://ancient-ravine-45095.herokuapp.com/readtoolsData?limit=6').then(res =>
             res.json()
         )
     )

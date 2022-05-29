@@ -31,7 +31,7 @@ const UserTableRow = ({ user: userData,refetch }) => {
 
         console.log(id);
         const token = localStorage.getItem('accessToken')
-        fetch(`https://guarded-earth-35467.herokuapp.com/makeadmin/${id}`, {
+        fetch(`https://ancient-ravine-45095.herokuapp.com/makeadmin/${id}`, {
             method: "PUT",
             headers: {
                 accesstoken: `${email} ${token}`

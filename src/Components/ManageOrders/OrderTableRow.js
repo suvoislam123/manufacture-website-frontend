@@ -16,7 +16,7 @@ const OrderTableRow = (props) => {
     const email = user?.email
     const {_id, product_id, quantity, phone, address, name } = props.order
     const { isLoading: productLoading, data: product } = useQuery(['productdata', product_id], () =>
-        fetch(`https://guarded-earth-35467.herokuapp.com/readSingleToolsData/${product_id}`).then(res =>
+        fetch(`https://ancient-ravine-45095.herokuapp.com/readSingleToolsData/${product_id}`).then(res =>
             res.json()
         )
     )
@@ -39,7 +39,7 @@ const OrderTableRow = (props) => {
 
         console.log(id);
         const token = localStorage.getItem('accessToken')
-        fetch(`https://guarded-earth-35467.herokuapp.com/deleteOrdersData/${id}`, {
+        fetch(`https://ancient-ravine-45095.herokuapp.com/deleteOrdersData/${id}`, {
             method: "DELETE",
             headers: {
                 accesstoken: `${email} ${token}`

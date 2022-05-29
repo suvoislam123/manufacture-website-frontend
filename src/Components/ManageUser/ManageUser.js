@@ -11,7 +11,7 @@ const ManageUser = () => {
     // const [isAdmin,adminLoading]=useAdmin(user)
 
     const { isLoading: userLoading, data: users ,refetch} = useQuery(['usersdata',user], () =>
-		fetch(`https://guarded-earth-35467.herokuapp.com/readUserData`).then(res =>
+		fetch(`https://ancient-ravine-45095.herokuapp.com/readUserData`).then(res =>
 			res.json()
 		)
 	)

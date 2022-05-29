@@ -25,7 +25,7 @@ const Signup = () => {
     useEffect(() => {
         if (user) {
             console.log();
-            fetch('https://guarded-earth-35467.herokuapp.com/login', {
+            fetch('https://ancient-ravine-45095.herokuapp.com/login', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
