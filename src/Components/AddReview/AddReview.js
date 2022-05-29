@@ -51,18 +51,18 @@ const AddReview = () => {
 
   return (
     <div>
-      <div class="container widget dashboard-container ">
+      <div className="container widget dashboard-container ">
         <h4 className="text-center mb-4">Give a Review</h4>
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
+        <div className="row">
+          <div className="col-md-8 mx-auto">
+            <div className="wow fadeInUp" data-wow-delay="0.2s">
               <form onSubmit={handleFormsubmit} id="review-form">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-floating">
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <div className="form-floating">
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         readOnly
                         id="name"
                         value={userData.name}
@@ -71,12 +71,12 @@ const AddReview = () => {
                       <label for="name">Your Name</label>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
+                  <div className="col-md-6">
+                    <div className="form-floating">
                       <input
                         type="email"
                         readOnly
-                        class="form-control"
+                        className="form-control"
                         value={userData.email}
                         id="email"
                         placeholder="Your Email"
@@ -84,12 +84,12 @@ const AddReview = () => {
                       <label for="email">Your Email</label>
                     </div>
                   </div>
-                  <div class="col-12">
-                    <div class="form-floating">
+                  <div className="col-12">
+                    <div className="form-floating">
                       <input
                         ref={review}
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         required
                         id="subject"
                         placeholder="Phone"
@@ -97,7 +97,7 @@ const AddReview = () => {
                       <label for="subject">Review</label>
                     </div>
                   </div>
-                  <div class="col-12 d-flex align-items-center">
+                  <div className="col-12 d-flex align-items-center">
                     <label className="me-2">
                       <strong>Ratings:</strong>{" "}
                     </label>
@@ -110,8 +110,8 @@ const AddReview = () => {
                     />
                   </div>
 
-                  <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
+                  <div className="col-12">
+                    <button className="btn btn-primary w-100 py-3" type="submit">
                       Give Review
                     </button>
                   </div>

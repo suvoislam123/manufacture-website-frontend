@@ -75,10 +75,10 @@ const UserTableRow = ({ user: userData,refetch }) => {
                     }
 
                 </td>
-                <td class="action" data-title="Action">
-                    <div class="">
-                        <ul class="list-inline justify-content-center d-flex">
-                            <button onClick={() => showDeleteModal(userData._id)} type="button" disabled={userData?.role === 'admin'} class="btn btn-success p-1 me-2">{userData?.role === 'admin' ? 'Admin' : 'Make Admin'}</button>
+                <td className="action" data-title="Action">
+                    <div className="">
+                        <ul className="list-inline justify-content-center d-flex">
+                            <button onClick={() => showDeleteModal(userData._id)} type="button" disabled={userData?.role === 'admin'} className="btn btn-success p-1 me-2">{userData?.role === 'admin' ? 'Admin' : 'Make Admin'}</button>
                         </ul>
                     </div>
                 </td>

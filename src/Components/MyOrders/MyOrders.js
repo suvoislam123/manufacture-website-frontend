@@ -25,15 +25,15 @@ const MyOrders = () => {
 
     return (
         <>
-            <div class="widget dashboard-container my-adslist">
-                <h3 class="widget-header text-center">My Orders {orders?.length}</h3>
-                <table class="table table-responsive product-dashboard-table">
+            <div className="widget dashboard-container my-adslist">
+                <h3 className="widget-header text-center">My Orders {orders?.length}</h3>
+                <table className="table table-responsive product-dashboard-table">
                     <thead>
                         <tr>
                             <th>Image</th>
                             <th>Product Title</th>
-                            <th class="text-center">Category</th>
-                            <th class="text-center">Action</th>
+                            <th className="text-center">Category</th>
+                            <th className="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>

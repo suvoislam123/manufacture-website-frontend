@@ -69,64 +69,64 @@ const MyProfile = () => {
     return (
         <>
             <div>
-                <div class="container widget dashboard-container ">
+                <div className="container widget dashboard-container ">
                     <h4 className="text-center mb-4">Update Your Profile</h4>
                     <ToastContainer></ToastContainer>
-                    <div class="row">
-                        <div class="col-md-8 mx-auto">
-                            <div class="wow fadeInUp" data-wow-delay="0.2s">
+                    <div className="row">
+                        <div className="col-md-8 mx-auto">
+                            <div className="wow fadeInUp" data-wow-delay="0.2s">
                                 <form onSubmit={handleFormsubmit} id="review-form">
-                                    <div class="row g-3">
+                                    <div className="row g-3">
 
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" onChange={(e) => setName(e.target.value)} value={name} id="name" />
+                                        <div className="col-md-6">
+                                            <div className="form-floating">
+                                                <input type="text" className="form-control" onChange={(e) => setName(e.target.value)} value={name} id="name" />
                                                 <label for="name">Your Name</label>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="email" readOnly class="form-control" value={userData.email} id="email" />
+                                        <div className="col-md-6">
+                                            <div className="form-floating">
+                                                <input type="email" readOnly className="form-control" value={userData.email} id="email" />
                                                 <label for="email">Your Email</label>
                                             </div>
                                         </div>
 
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control"  id="subject" onChange={(e) => setImg(e.target.value)} value={img} placeholder="Image URL" />
+                                        <div className="col-12">
+                                            <div className="form-floating">
+                                                <input type="text" className="form-control"  id="subject" onChange={(e) => setImg(e.target.value)} value={img} placeholder="Image URL" />
                                                 <label for="subject">Image URL</label>
                                             </div>
                                         </div>
 
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" onChange={(e) => setAddress(e.target.value)} value={address}  id="subject" placeholder="Your Address" />
+                                        <div className="col-12">
+                                            <div className="form-floating">
+                                                <input type="text" className="form-control" onChange={(e) => setAddress(e.target.value)} value={address}  id="subject" placeholder="Your Address" />
                                                 <label for="subject">Your Address</label>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" readOnly value={userData.role ? 'Admin' : 'User'} required id="name" placeholder="Role" />
+                                        <div className="col-md-6">
+                                            <div className="form-floating">
+                                                <input type="text" className="form-control" readOnly value={userData.role ? 'Admin' : 'User'} required id="name" placeholder="Role" />
                                                 <label for="name">Role</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="number" class="form-control" onChange={(e) => setAge(e.target.value)} value={age}  id="email" placeholder="Your Age" />
+                                        <div className="col-md-6">
+                                            <div className="form-floating">
+                                                <input type="number" className="form-control" onChange={(e) => setAge(e.target.value)} value={age}  id="email" placeholder="Your Age" />
                                                 <label for="email">Your Age</label>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" onChange={(e) => setPhone(e.target.value)} value={phone} class="form-control"  id="subject" placeholder="Your Phone Number" />
+                                        <div className="col-12">
+                                            <div className="form-floating">
+                                                <input type="text" onChange={(e) => setPhone(e.target.value)} value={phone} className="form-control"  id="subject" placeholder="Your Phone Number" />
                                                 <label for="subject">Your Phone Number</label>
                                             </div>
                                         </div>
 
-                                        <div class="col-12">
-                                            <button class="btn btn-success w-100 py-3" type="submit">Save</button>
+                                        <div className="col-12">
+                                            <button className="btn btn-success w-100 py-3" type="submit">Save</button>
                                         </div>
                                     </div>
                                 </form>

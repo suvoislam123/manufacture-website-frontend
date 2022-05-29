@@ -18,16 +18,16 @@ const ProductList = () => {
     }  
     return (
         <>
-            <section class="popular-deals section bg-gray">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-title">
+            <section className="popular-deals section bg-gray">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="section-title">
                                 <h2>Trending Products</h2>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
 
                         {
                             products.map((product)=>{

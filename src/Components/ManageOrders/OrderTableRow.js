@@ -78,22 +78,22 @@ const OrderTableRow = (props) => {
                 pauseOnHover
             />
             <tr>
-                <td class="product-thumb">
+                <td className="product-thumb">
                     <img width="80px" height="auto" src={product.img} alt="" /></td>
-                <td class="product-details">
-                    <h3 class="title">{product.name}</h3>
-                    <span class="add-id"><strong>Quantity:</strong> {quantity}</span>
+                <td className="product-details">
+                    <h3 className="title">{product.name}</h3>
+                    <span className="add-id"><strong>Quantity:</strong> {quantity}</span>
                     <span><strong>Phone: </strong>{phone} </span>
                     <span><strong>Price: </strong>${parseInt(product.price) * parseInt(quantity)} </span>
-                    <span class="status active"><strong>Status</strong>Active</span>
-                    <span class="location"><strong>Location</strong>{address}</span>
+                    <span className="status active"><strong>Status</strong>Active</span>
+                    <span className="location"><strong>Location</strong>{address}</span>
                 </td>
-                <td class="product-category"><span class="categories">{name}</span></td>
-                <td class="action" data-title="Action">
-                    <div class="">
-                        <ul class="list-inline justify-content-center d-flex">
-                            <button type="button" class="btn btn-success p-1 me-2">Payment</button>
-                            <button type="button"  class="btn btn-danger p-1" onClick={() => showDeleteModal(_id)}>Cancel</button>
+                <td className="product-category"><span className="categories">{name}</span></td>
+                <td className="action" data-title="Action">
+                    <div className="">
+                        <ul className="list-inline justify-content-center d-flex">
+                            <button type="button" className="btn btn-success p-1 me-2">Payment</button>
+                            <button type="button"  className="btn btn-danger p-1" onClick={() => showDeleteModal(_id)}>Cancel</button>
                         </ul>
                     </div>
                 </td>

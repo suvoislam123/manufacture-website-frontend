@@ -23,7 +23,7 @@ import MyPortfolio from './Components/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <Nabvar></Nabvar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -45,7 +45,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       </Routes>
       <Footer></Footer>
-    </>
+    </div>
   );
 }
 

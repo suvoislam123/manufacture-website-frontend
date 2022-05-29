@@ -14,16 +14,16 @@ if (isLoading) {
 }
 return (
   <>
-    <div class="widget dashboard-container my-adslist">
-            <h3 class="widget-header text-center">Total Orders : {orders?.length}</h3>
+    <div className="widget dashboard-container my-adslist">
+            <h3 className="widget-header text-center">Total Orders : {orders?.length}</h3>
             <div className="table-responsive ">
-            <table class="table product-dashboard-table">
+            <table className="table product-dashboard-table">
                 <thead>
                     <tr>
                         <th>Image</th>
                         <th>Product Information</th>
-                        <th class="text-center">Customer Information</th>
-                        <th class="text-center">Action</th>
+                        <th className="text-center">Customer Information</th>
+                        <th className="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>

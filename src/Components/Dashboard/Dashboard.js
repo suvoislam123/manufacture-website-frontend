@@ -17,21 +17,21 @@ const Dashboard = () => {
 
     return (
         <>
-            <section class="dashboard section">
-                <div class="container">
+            <section className="dashboard section">
+                <div className="container">
 
-                    <div class="row">
-                        <div class="col-md-10 offset-md-1 col-lg-4 offset-lg-0">
+                    <div className="row">
+                        <div className="col-md-10 offset-md-1 col-lg-4 offset-lg-0">
 
-                            <div class="sidebar">
-                                <div class="widget user-dashboard-profile">
-                                    <div class="profile-thumb">
-                                        <img src={imageavatar} alt="" class="rounded-circle" />
+                            <div className="sidebar">
+                                <div className="widget user-dashboard-profile">
+                                    <div className="profile-thumb">
+                                        <img src={imageavatar} alt="" className="rounded-circle" />
                                     </div>
-                                    <h5 class="text-center">{user?.email}</h5>
+                                    <h5 className="text-center">{user?.email}</h5>
                                     {/* <p>Joined February 06, 2017</p> */}
                                 </div>
-                                <div class="widget user-dashboard-menu">
+                                <div className="widget user-dashboard-menu">
                                     <ul className='d-flex flex-column'>
 
                                         {isAdmin ? <>
@@ -49,7 +49,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
+                        <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
 
                             <Outlet></Outlet>
 
