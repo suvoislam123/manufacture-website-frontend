@@ -52,7 +52,7 @@ const Nabvar = () => {
                 className="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
                 <a href="index.html" className="navbar-brand p-0">
                     <h1 className="m-0 text-primary">
-                        Vitage Wheels
+                        Powered Tools
                     </h1>
                 </a>
                 <button
