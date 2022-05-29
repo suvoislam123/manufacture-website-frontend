@@ -1,85 +1,52 @@
- import logo from './logo.svg';
 import './App.css';
-import Header from './components/sharedComponents/Header/Header';
+
 import { Route, Routes } from 'react-router-dom';
-import NotFound from './components/sharedComponents/NotFound/NotFound';
-import Home from './components/standAlonComponents/Home/Home';
-import Footer from './components/sharedComponents/Footer/Footer';
-import Register from './components/sharedComponents/Login/Register/Register';
-import Login from './components/sharedComponents/Login/Login/Login';
-import About from './components/standAlonComponents/About/About';
-import RequireAuth from './components/sharedComponents/Login/RequireAuth/RequireAuth';
-import UserOrders from './components/standAlonComponents/UserOrders/UserOrders';
-import AdminOrders from './components/standAlonComponents/Admin/AdminOrders/AdminOrders';
-import AdminRequireAuth from './components/sharedComponents/Login/RequireAuth/AdminRequireAuth';
-import ManageInventory from './components/standAlonComponents/Admin/ManageInventory/ManageInventory';
-import AddProduct from './components/standAlonComponents/Admin/AddProduct/AddProduct';
-import UpdateInventoryItem from './components/standAlonComponents/Admin/ManageInventory/UpdateInventoryItem/UpdateInventoryItem';
-import Blogs from './components/standAlonComponents/Blogs/Blogs';
-import ConfirmOrder from './components/standAlonComponents/UserOrders/ConfirmOrder/ConfirmOrder';
-import UserPayment from './components/standAlonComponents/UserOrders/UserPayment';
+import Banner from './Components/Banner/Banner';
+import Nabvar from './Components/Navbar/Nabvar';
+import Home from './Components/Home/Home';
+import Footer from './Components/Footer/Footer';
+import Signup from './Components/Signup/Signup';
+import Login from './Components/Login/Login';
+import Blogs from './Components/Blogs/Blogs';
+
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import ProductDetails from './Components/ProductDetails/ProductDetails';
+import Dashboard from './Components/Dashboard/Dashboard';
+import MyOrders from './Components/MyOrders/MyOrders';
+import AddReview from './Components/AddReview/AddReview';
+import ManageUser from './Components/ManageUser/ManageUser';
+import AddProduct from './Components/AddProduct/AddProduct';
+import ManageProducts from './Components/ManageProducts/ManageProducts';
+import ManageOrders from './Components/ManageOrders/ManageOrders';
+import MyProfile from './Components/MyProfile/MyProfile';
+import MyPortfolio from './Components/MyPortfolio/MyPortfolio';
+
 function App() {
   return (
-    <div className="App flex flex-col justify-between ">
-      <Header />
+    <>
+      <Nabvar></Nabvar>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/register' element={<Register />}></Route>
-        <Route path='/blogs' element={<Blogs />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/admin/updateinventoryitem/:id' element={
-          <AdminRequireAuth>
-            <UpdateInventoryItem />
-          </AdminRequireAuth>
-        }></Route>
-        <Route path='/orders' element={
-          <RequireAuth>
-            <UserOrders />
-          </RequireAuth>
-        }></Route>
-        <Route path='/confirmorder/:id' element={<RequireAuth>
-          <ConfirmOrder />
-        </RequireAuth>}
-
-        ></Route>
-        <Route path='/payments/:id' element={
-          <RequireAuth>
-            <UserPayment />
-          </RequireAuth>
-        }></Route>
-        <Route path='/about' element={
-          <RequireAuth>
-            <About />
-          </RequireAuth>
-        }></Route>
-        <Route path='/admin/orders' element={
-          <AdminRequireAuth >
-            <AdminOrders />
-          </AdminRequireAuth>
-        }></Route>
-        <Route path='/admin/manageinventory/' element={
-          <AdminRequireAuth>
-            <ManageInventory />
-          </AdminRequireAuth>
-        }></Route>
-        <Route path='/admin/addproduct/' element={
-          <AdminRequireAuth>
-            <AddProduct />
-          </AdminRequireAuth>
-        }></Route>
-        <Route path='/admin/manageinventory' element={
-          <AdminRequireAuth>
-            <ManageInventory />
-          </AdminRequireAuth>
-        } ></Route>
-        <Route path='/orders' element={<UserOrders />}></Route>
-        <Route path='*' element={<NotFound />}></Route>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+          {/* <Route path='' element={<MyOrders></MyOrders>}></Route> */}
+          <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
+          <Route path='addreview' element={<AddReview></AddReview>}></Route>
+          <Route path='manageusers' element={<ManageUser></ManageUser>}></Route>
+          <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
+          <Route path='manageorders' element={<ManageOrders></ManageOrders>}></Route>
+          <Route path='manageprofile' element={<MyProfile></MyProfile>}></Route>
+        </Route>
+        <Route path='/productdetails/:id' element={<ProductDetails></ProductDetails>}></Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       </Routes>
       <Footer></Footer>
-    </div>
+    </>
   );
 }
 
 export default App;
-//https://stackoverflow.com/questions/72162598/why-i-cant-call-usestate-hook-inside-the-components-function
