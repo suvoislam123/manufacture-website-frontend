@@ -50,7 +50,7 @@ const Footer = () => {
                           
                             <div className="block-2 app-promotion">
                                
-                                <p>Vintage Wheels</p>
+                                <p>POWERED TOOLS</p>
                             </div>
                         </div>
                     </div>

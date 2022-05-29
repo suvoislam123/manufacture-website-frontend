@@ -17,8 +17,8 @@ const BussinessSummary = () => {
                     </div>
                     <div className="row g-5 align-items-center m-0">
                         <div className="col-lg-6">
-                            <h1 className="mb-4">Welcome to <span className="text-primary text-uppercase">Vintage Wheels</span></h1>
-                            <p className="mb-4">Vintage wheels is an Automobile spare parts and accessories manufacturing organization for Passenger vehicles and commercial vehicles. We mainly produce Engine Air Elements, Cabin Filter, for Engine intake air systems and we also produce Engine oil Filter and Engine coolant water.</p>
+                            <h1 className="mb-4">Welcome to <span className="text-primary text-uppercase">POWERED TOOLS</span></h1>
+                            <p className="mb-4">POWERED TOOLS is an Automobile spare parts and accessories manufacturing organization for Passenger vehicles and commercial vehicles. We mainly produce Engine Air Elements, Cabin Filter, for Engine intake air systems and we also produce Engine oil Filter and Engine coolant water.</p>
                             <div className="row g-3 pb-4">
                                 <div className="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                     <div className="border rounded p-1">
