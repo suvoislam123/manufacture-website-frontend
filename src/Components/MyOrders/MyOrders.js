@@ -14,7 +14,7 @@ const MyOrders = () => {
     useEffect(()=>{
         if(user)
         { 
-         fetch(`https://ancient-ravine-45095.herokuapp.com/readmyorders?email=${user?.email}`)
+         fetch(`https://arcane-stream-89038.herokuapp.com/readmyorders?email=${user?.email}`)
 		.then(res=>res.json())
 		.then(data=>setOrders(data))
 

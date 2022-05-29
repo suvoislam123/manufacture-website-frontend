@@ -5,7 +5,7 @@ import OrderTableRow from './OrderTableRow';
 
 const ManageOrders = () => {
     const { isLoading, error, data: orders ,refetch} = useQuery('ordersdata', () =>
-    fetch('https://ancient-ravine-45095.herokuapp.com/readorders').then(res =>
+    fetch('https://arcane-stream-89038.herokuapp.com/readorders').then(res =>
         res.json()
     )
 )

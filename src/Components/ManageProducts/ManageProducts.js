@@ -6,7 +6,7 @@ import ProductTableRow from './ProductTableRow';
 
 const ManageProducts = () => {
     const { isLoading, error, data: products,refetch } = useQuery('productsData', () =>
-        fetch('https://ancient-ravine-45095.herokuapp.com/readtoolsData').then(res =>
+        fetch('https://arcane-stream-89038.herokuapp.com/readtoolsData').then(res =>
             res.json()
         )
     )

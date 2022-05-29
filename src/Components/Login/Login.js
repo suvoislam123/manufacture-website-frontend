@@ -27,7 +27,7 @@ const Login = () => {
     useEffect(() => {
         if (user) {
 
-            fetch('https://ancient-ravine-45095.herokuapp.com/login', {
+            fetch('https://arcane-stream-89038.herokuapp.com/login', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

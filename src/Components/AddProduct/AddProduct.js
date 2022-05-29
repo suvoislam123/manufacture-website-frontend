@@ -16,7 +16,7 @@ const AddProduct = () => {
     const quantity = useRef('');
 
     const { isLoading: userloading, data: userData } = useQuery(['userdata', user], () =>
-        fetch(`https://ancient-ravine-45095.herokuapp.com/readUserData?email=${user?.email}`).then(res =>
+        fetch(`https://arcane-stream-89038.herokuapp.com/readUserData?email=${user?.email}`).then(res =>
             res.json()
         )
     )
@@ -36,7 +36,7 @@ const AddProduct = () => {
             
         }
         e.preventDefault();
-        fetch("https://ancient-ravine-45095.herokuapp.com/addproduct", {
+        fetch("https://arcane-stream-89038.herokuapp.com/addproduct", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

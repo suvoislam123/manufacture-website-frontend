@@ -5,7 +5,7 @@ import Spinner from '../Spinner/Spinner';
 const MyOrderRow = (props) => {
     const { product_id, quantity, phone, address } = props.order
     const { isLoading: productLoading, data: product } = useQuery(['productdata',product_id], () =>
-        fetch(`https://ancient-ravine-45095.herokuapp.com/readSingleToolsData/${product_id}`).then(res =>
+        fetch(`https://arcane-stream-89038.herokuapp.com/readSingleToolsData/${product_id}`).then(res =>
             res.json()
         )
     )
